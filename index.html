@@ -212,13 +212,6 @@
 
               <time title="Created: 2023-03-22 19:08:22" itemprop="dateCreated datePublished" datetime="2023-03-22T19:08:22+08:00">2023-03-22</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-23 19:57:16" itemprop="dateModified" datetime="2023-03-23T19:57:16+08:00">2023-03-23</time>
-              </span>
 
           
 
@@ -290,13 +283,6 @@
 
               <time title="Created: 2021-04-16 11:30:58" itemprop="dateCreated datePublished" datetime="2021-04-16T11:30:58+08:00">2021-04-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 18:07:38" itemprop="dateModified" datetime="2023-03-22T18:07:38+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -362,13 +348,6 @@
 
               <time title="Created: 2019-07-28 13:10:22" itemprop="dateCreated datePublished" datetime="2019-07-28T13:10:22+08:00">2019-07-28</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -444,13 +423,6 @@
 
               <time title="Created: 2019-07-26 19:09:49" itemprop="dateCreated datePublished" datetime="2019-07-26T19:09:49+08:00">2019-07-26</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -516,13 +488,6 @@
 
               <time title="Created: 2018-11-04 14:42:58" itemprop="dateCreated datePublished" datetime="2018-11-04T14:42:58+08:00">2018-11-04</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -590,13 +555,6 @@
 
               <time title="Created: 2018-10-16 22:08:41" itemprop="dateCreated datePublished" datetime="2018-10-16T22:08:41+08:00">2018-10-16</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -610,7 +568,8 @@
 
       
           <h2 id="关于工作的一些记录"><a href="#关于工作的一些记录" class="headerlink" title="关于工作的一些记录"></a>关于工作的一些记录</h2><h3 id="2018-10-16"><a href="#2018-10-16" class="headerlink" title="2018.10.16"></a>2018.10.16</h3><ol>
-<li>react v16.5.2 生命周期<br>- static getDerivedStateFromProps()   <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getDerivedStateFromProps</span>(nextProps, prevState)</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. 调用：组件实例化后和接收新属性时将会调用；</span></span><br><span class="line"><span class="comment">* 2. 返回一个对象来更新状态，返回 null 表明新属性不需要更新状态；</span></span><br><span class="line"><span class="comment">* 3. 调用 this.setState() 通常不会调用该方法。</span></span><br><span class="line"><span class="comment">* 注意：父组件导致组件的渲染，即使属性没有更新，该方法也会被调用。</span></span><br><span class="line"><span class="comment">* 该方法替换了以往使用的 componentWillReceiveProps(nextProps) 方法。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+<li><p>react v16.5.2 生命周期<br>  关于 <code>static getDerivedStateFromProps()</code></p>
+ <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getDerivedStateFromProps</span>(nextProps, prevState)</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. 调用：组件实例化后和接收新属性时将会调用；</span></span><br><span class="line"><span class="comment">* 2. 返回一个对象来更新状态，返回 null 表明新属性不需要更新状态；</span></span><br><span class="line"><span class="comment">* 3. 调用 this.setState() 通常不会调用该方法。</span></span><br><span class="line"><span class="comment">* 注意：父组件导致组件的渲染，即使属性没有更新，该方法也会被调用。</span></span><br><span class="line"><span class="comment">* 该方法替换了以往使用的 componentWillReceiveProps(nextProps) 方法。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
           <!--noindex-->
             <div class="post-button">
@@ -664,13 +623,6 @@
 
               <time title="Created: 2018-08-18 16:03:14" itemprop="dateCreated datePublished" datetime="2018-08-18T16:03:14+08:00">2018-08-18</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -737,13 +689,6 @@
 
               <time title="Created: 2018-07-13 13:41:52" itemprop="dateCreated datePublished" datetime="2018-07-13T13:41:52+08:00">2018-07-13</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -814,13 +759,6 @@
 
               <time title="Created: 2018-06-19 18:00:06" itemprop="dateCreated datePublished" datetime="2018-06-19T18:00:06+08:00">2018-06-19</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
@@ -886,13 +824,6 @@
 
               <time title="Created: 2017-06-02 14:40:23" itemprop="dateCreated datePublished" datetime="2017-06-02T14:40:23+08:00">2017-06-02</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-22 14:13:59" itemprop="dateModified" datetime="2023-03-22T14:13:59+08:00">2023-03-22</time>
-              </span>
 
           
 
