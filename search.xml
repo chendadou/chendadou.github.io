@@ -251,6 +251,40 @@
       </tags>
   </entry>
   <entry>
+    <title>关于 Git 常用命令</title>
+    <url>/2018/11/04/git/</url>
+    <content><![CDATA[<ol>
+<li><p>设置用户信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+</li>
+<li><p>查看配置信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取帮助</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新到仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分支相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tag 相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程仓库相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>强制 merge 分支 a 并覆盖分支 b</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Work</title>
     <url>/2018/10/16/work/</url>
     <content><![CDATA[<h2 id="关于工作的一些记录"><a href="#关于工作的一些记录" class="headerlink" title="关于工作的一些记录"></a>关于工作的一些记录</h2><h3 id="2018-10-16"><a href="#2018-10-16" class="headerlink" title="2018.10.16"></a>2018.10.16</h3><ol>
@@ -290,40 +324,6 @@
 ]]></content>
       <tags>
         <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于 Git 常用命令</title>
-    <url>/2018/11/04/git/</url>
-    <content><![CDATA[<ol>
-<li><p>设置用户信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-</li>
-<li><p>查看配置信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取帮助</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新到仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分支相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tag 相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>远程仓库相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>强制 merge 分支 a 并覆盖分支 b</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
       </tags>
   </entry>
   <entry>
