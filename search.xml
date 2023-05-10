@@ -620,4 +620,16 @@
         <tag>webpack</tag>
       </tags>
   </entry>
+  <entry>
+    <title>从零搭建 React + TS 项目（二）</title>
+    <url>/2023/05/10/scaffolding002/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>基于 React18 + Webapck5 + TypeScript4 的自用脚手架搭建过程记录。</p>
+<span id="more"></span>
+]]></content>
+      <tags>
+        <tag>react</tag>
+        <tag>typescript</tag>
+        <tag>webpack</tag>
+      </tags>
+  </entry>
 </search>
