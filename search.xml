@@ -78,6 +78,66 @@
       </tags>
   </entry>
   <entry>
+    <title>Collections</title>
+    <url>/2018/07/13/collections/</url>
+    <content><![CDATA[<ol>
+<li><p><a href="http://www.bootcdn.cn/">http://www.bootcdn.cn/</a><br> 前端开源项目 CDN 加速服务</p>
+</li>
+<li><p><a href="https://github.com/ProtoTeam/blog/blob/master/201805/3.md">https://github.com/ProtoTeam/blog/blob/master/201805/3.md</a><br> 如何阅读大型前端开源项目的源码</p>
+</li>
+</ol>
+<span id="more"></span>
+
+<ol start="3">
+<li><p><a href="https://www.npmjs.com/">https://www.npmjs.com/</a><br> npm is the package manager for JavaScript and the world’s largest software registry</p>
+</li>
+<li><p><a href="http://sangka-z.com/react-in-patterns-cn/">http://sangka-z.com/react-in-patterns-cn/</a><br> React 模式</p>
+</li>
+<li><p><a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html">http://www.ruanyifeng.com/blog/2016/06/css_modules.html</a><br> CSS Modules 用法教程</p>
+</li>
+<li><p><a href="https://caniuse.com/">https://caniuse.com/</a><br> 前端兼容性自查工具</p>
+</li>
+<li><p><a href="https://cn.vuejs.org/">https://cn.vuejs.org/</a><br> Vue.js</p>
+</li>
+<li><p><a href="https://reactjs.org/">https://reactjs.org/</a><br> React.js</p>
+</li>
+<li><p><a href="https://www.webpackjs.com/">https://www.webpackjs.com/</a><br> Webpack，静态模块打包器</p>
+</li>
+<li><p><a href="https://jsonlint.com/">https://jsonlint.com/</a><br>JSON 校验与转换</p>
+</li>
+<li><p><a href="http://nodejs.cn/">http://nodejs.cn/</a><br>Node.js</p>
+</li>
+<li><p><a href="http://www.expressjs.com.cn/">http://www.expressjs.com.cn/</a><br>Express，基于 Node.js 平台的 web 开发框架</p>
+</li>
+<li><p><a href="https://yarn.bootcss.com/">https://yarn.bootcss.com/</a><br>Yarn，依赖管理工具</p>
+</li>
+<li><p><a href="https://koa.bootcss.com/">https://koa.bootcss.com/</a><br>Koa，基于 Node.js 平台的下一代 web 开发框架</p>
+</li>
+<li><p><a href="https://www.babeljs.cn/">https://www.babeljs.cn/</a><br>Babel，Javascript 编译器</p>
+</li>
+<li><p><a href="https://react-guide.github.io/react-router-cn/">https://react-guide.github.io/react-router-cn/</a><br>React Router 中文文档</p>
+</li>
+<li><p><a href="https://www.redux.org.cn/">https://www.redux.org.cn/</a><br>React Redux 中文文档</p>
+</li>
+<li><p><a href="https://reactnative.cn/">https://reactnative.cn/</a><br>React Native</p>
+</li>
+<li><p><a href="https://www.tslang.cn/">https://www.tslang.cn/</a><br>Typescript</p>
+</li>
+<li><p><a href="https://vuex.vuejs.org/">https://vuex.vuejs.org/</a><br>Vuex</p>
+</li>
+<li><p><a href="https://pro.ant.design/index-cn">https://pro.ant.design/index-cn</a><br>ant-design-pro, 开箱即用的中台前端&#x2F;设计解决方案</p>
+</li>
+<li><p><a href="https://panjiachen.github.io/vue-element-admin-site/zh/">https://panjiachen.github.io/vue-element-admin-site/zh/</a><br>vue-element-admin</p>
+</li>
+<li><p><a href="https://wangdoc.com/ssh/index.html">https://wangdoc.com/ssh/index.html</a><br>SSH 教程</p>
+</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于 HTTP 基础</title>
     <url>/2018/06/19/http/</url>
     <content><![CDATA[<h2 id="HTTP-的三次握手"><a href="#HTTP-的三次握手" class="headerlink" title="HTTP 的三次握手"></a>HTTP 的三次握手</h2><h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>创建一个TCP连接的过程。</p>
@@ -132,59 +192,41 @@
       </tags>
   </entry>
   <entry>
-    <title>Collections</title>
-    <url>/2018/07/13/collections/</url>
-    <content><![CDATA[<ol>
-<li><p><a href="http://www.bootcdn.cn/">http://www.bootcdn.cn/</a><br> 前端开源项目 CDN 加速服务</p>
-</li>
-<li><p><a href="https://github.com/ProtoTeam/blog/blob/master/201805/3.md">https://github.com/ProtoTeam/blog/blob/master/201805/3.md</a><br> 如何阅读大型前端开源项目的源码</p>
-</li>
+    <title>Work</title>
+    <url>/2018/10/16/work/</url>
+    <content><![CDATA[<h2 id="关于工作的一些记录"><a href="#关于工作的一些记录" class="headerlink" title="关于工作的一些记录"></a>关于工作的一些记录</h2><h3 id="2018-10-16"><a href="#2018-10-16" class="headerlink" title="2018.10.16"></a>2018.10.16</h3><ol>
+<li><p>react v16.5.2 生命周期<br>  关于 <code>static getDerivedStateFromProps()</code></p>
+ <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getDerivedStateFromProps</span>(nextProps, prevState)</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. 调用：组件实例化后和接收新属性时将会调用；</span></span><br><span class="line"><span class="comment">* 2. 返回一个对象来更新状态，返回 null 表明新属性不需要更新状态；</span></span><br><span class="line"><span class="comment">* 3. 调用 this.setState() 通常不会调用该方法。</span></span><br><span class="line"><span class="comment">* 注意：父组件导致组件的渲染，即使属性没有更新，该方法也会被调用。</span></span><br><span class="line"><span class="comment">* 该方法替换了以往使用的 componentWillReceiveProps(nextProps) 方法。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <span id="more"></span>
 
-<ol start="3">
-<li><p><a href="https://www.npmjs.com/">https://www.npmjs.com/</a><br> npm is the package manager for JavaScript and the world’s largest software registry</p>
+<ol start="2">
+<li><p>antd v3.8.4<br>  Modal 对话框</p>
+  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Modal</span> <span class="attr">destroyOnClose</span>=<span class="string">&#123;true&#125;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Modal</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- destroyOnClose 参数，关闭时销毁 Modal 里的子元素，默认值为 false  --&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p><a href="http://sangka-z.com/react-in-patterns-cn/">http://sangka-z.com/react-in-patterns-cn/</a><br> React 模式</p>
+<li><p>echarts<br>  线形图的 <code>tooltip</code> 中 <code>formatter</code> 属性自定义</p>
+  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tooltip1 = &#123;</span><br><span class="line">  <span class="attr">trigger</span>: <span class="string">&#x27;axis&#x27;</span>,</span><br><span class="line">  <span class="attr">formatter</span>: <span class="string">&#x27;&#123;a&#125;&lt;br&gt;&#123;b&#125;&lt;br&gt;&#123;c&#125;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> tooltip2 = &#123;</span><br><span class="line">  <span class="attr">trigger</span>: <span class="string">&#x27;axis&#x27;</span>,</span><br><span class="line">  <span class="attr">formatter</span>: <span class="keyword">function</span>(<span class="params">params</span>)&#123;</span><br><span class="line">      <span class="keyword">var</span> str = params[<span class="number">0</span>].<span class="property">axisValueLabel</span> + <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;params.<span class="property">length</span>; i++)&#123;</span><br><span class="line">          str+=params[i].<span class="property">marker</span> + params[i].<span class="property">value</span> + <span class="string">&#x27; 自定义文字&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> str;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. trigger: axis（坐标轴触发），item（数据项图形）；</span></span><br><span class="line"><span class="comment">* 2. formatter 自定义：</span></span><br><span class="line"><span class="comment">*  (1) 字符串，缺点是没有了原有的对应的标识（marker）；</span></span><br><span class="line"><span class="comment">*  (2) 回调函数：有效解决了字符串存在的问题。  </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="2018-10-17"><a href="#2018-10-17" class="headerlink" title="2018.10.17"></a>2018.10.17</h3><p>socket.io-client</p>
+<ol>
+<li>问题：在某个组件内的 <code>componentDidMount()</code> 方法中使用，卸载时没有进行监听事件的移除，导致一直在监听事件。</li>
+<li>解决方式：期望只在该组件中监听事件，当组件移除时取消通讯。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">Demo</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span> = <span class="title function_">io</span>(<span class="string">&#x27;http://www.xxx.com/socket&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  componentDidMount = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">emit</span>(<span class="string">&#x27;getData&#x27;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">on</span>(<span class="string">&#x27;getData&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;getData&#x27;</span>, e);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  componentWillUnmount = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 移除监听事件</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">removeListener</span>(<span class="string">&#x27;getData&#x27;</span>);</span><br><span class="line">    <span class="comment">// this.socketObj.close()，关闭连接。</span></span><br><span class="line">    <span class="comment">// 但之后再次进入该组件时，每一次挂载操作会增加新的监听事件，导致事件数量一直增加。所以选择移除事件。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="2018-10-18"><a href="#2018-10-18" class="headerlink" title="2018.10.18"></a>2018.10.18</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> json1 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json2 = &#123; <span class="attr">a</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json3 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, json1, json2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(json3);  <span class="comment">// &#123; a: 2, b: 2, c: 3 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于以下的代码</span></span><br><span class="line"><span class="keyword">let</span> json4 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json5 = &#123; <span class="attr">a</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json6 = &#123;...json4, ...json5&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(json6);  <span class="comment">// &#123; a: 2, b: 2, c: 3 &#125;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2018-12-28"><a href="#2018-12-28" class="headerlink" title="2018.12.28"></a>2018.12.28</h3><p><code>input</code> 缓存问题（自动填充）</p>
+<ul>
+<li>问题：<code>input</code> 输入框会自动填充已存入浏览器的表单数据，主要表现在密码输入框。</li>
+<li>解决方式：<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 1. type = &#x27;text&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">autocomplete</span>=<span class="string">&#x27;off&#x27;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;text&#x27;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 2. type = &#x27;password&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> <span class="attr">style</span>=<span class="string">&#x27;display: none;&#x27;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 或者 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> <span class="attr">aotocomplete</span>=<span class="string">&#x27;new-password&#x27;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 附注：autocomplete=&#x27;off&#x27; 和 autocomplete=&#x27;new-password&#x27; 的 input 属性设置在 firefox 下可能无效。 --&gt;</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="2019-02-01"><a href="#2019-02-01" class="headerlink" title="2019.02.01"></a>2019.02.01</h3><p><code>Element.scrollIntoView()</code> 方法<br>官方解释：让当前的元素滚动到浏览器窗口的可视范围内。<br>支持两种参数传入方式：</p>
+<ol>
+<li><code>element.scrollIntoView(alignToTop:Boolean)</code>;<br>当传入 <code>true</code>，等价于 <code>element.scrollIntoView()</code>;<ul>
+<li><code>true</code>: 元素顶端与所在滚动区的可视区域的顶端对齐；</li>
+<li><code>false</code>: 元素顶端与所在滚动区的可视区域的底端对齐。</li>
+</ul>
 </li>
-<li><p><a href="http://www.ruanyifeng.com/blog/2016/06/css_modules.html">http://www.ruanyifeng.com/blog/2016/06/css_modules.html</a><br> CSS Modules 用法教程</p>
-</li>
-<li><p><a href="https://caniuse.com/">https://caniuse.com/</a><br> 前端兼容性自查工具</p>
-</li>
-<li><p><a href="https://cn.vuejs.org/">https://cn.vuejs.org/</a><br> Vue.js</p>
-</li>
-<li><p><a href="https://reactjs.org/">https://reactjs.org/</a><br> React.js</p>
-</li>
-<li><p><a href="https://www.webpackjs.com/">https://www.webpackjs.com/</a><br> Webpack，静态模块打包器</p>
-</li>
-<li><p><a href="https://jsonlint.com/">https://jsonlint.com/</a><br>JSON 校验与转换</p>
-</li>
-<li><p><a href="http://nodejs.cn/">http://nodejs.cn/</a><br>Node.js</p>
-</li>
-<li><p><a href="http://www.expressjs.com.cn/">http://www.expressjs.com.cn/</a><br>Express，基于 Node.js 平台的 web 开发框架</p>
-</li>
-<li><p><a href="https://yarn.bootcss.com/">https://yarn.bootcss.com/</a><br>Yarn，依赖管理工具</p>
-</li>
-<li><p><a href="https://koa.bootcss.com/">https://koa.bootcss.com/</a><br>Koa，基于 Node.js 平台的下一代 web 开发框架</p>
-</li>
-<li><p><a href="https://www.babeljs.cn/">https://www.babeljs.cn/</a><br>Babel，Javascript 编译器</p>
-</li>
-<li><p><a href="https://react-guide.github.io/react-router-cn/">https://react-guide.github.io/react-router-cn/</a><br>React Router 中文文档</p>
-</li>
-<li><p><a href="https://www.redux.org.cn/">https://www.redux.org.cn/</a><br>React Redux 中文文档</p>
-</li>
-<li><p><a href="https://reactnative.cn/">https://reactnative.cn/</a><br>React Native</p>
-</li>
-<li><p><a href="https://www.tslang.cn/">https://www.tslang.cn/</a><br>Typescript</p>
-</li>
-<li><p><a href="https://vuex.vuejs.org/">https://vuex.vuejs.org/</a><br>Vuex</p>
-</li>
-<li><p><a href="https://pro.ant.design/index-cn">https://pro.ant.design/index-cn</a><br>ant-design-pro, 开箱即用的中台前端&#x2F;设计解决方案</p>
-</li>
-<li><p><a href="https://panjiachen.github.io/vue-element-admin-site/zh/">https://panjiachen.github.io/vue-element-admin-site/zh/</a><br>vue-element-admin</p>
-</li>
-<li><p><a href="https://wangdoc.com/ssh/index.html">https://wangdoc.com/ssh/index.html</a><br>SSH 教程</p>
-</li>
+<li><code>element.scrollIntoView(scrollIntoViewOptions: Object)</code>;<br>IE 不支持。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>);</span><br><span class="line"></span><br><span class="line">element.<span class="title function_">scrollIntoView</span>();</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(<span class="literal">false</span>);</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(&#123;<span class="attr">block</span>: <span class="string">&#x27;end&#x27;</span>&#125;);</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(&#123;<span class="attr">behavior</span>: <span class="string">&#x27;instant&#x27;</span>, <span class="attr">block</span>: <span class="string">&#x27;end&#x27;</span>, <span class="attr">inline</span>: <span class="string">&#x27;nearest&#x27;</span>&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   1. behavior: 动画效果，默认值 auto，可选值有 auto, instant, smooth；</span></span><br><span class="line"><span class="comment">   2. block: 默认值 center, 可选值有 start, end, center, nearest；</span></span><br><span class="line"><span class="comment">   3. inline: 默认值 nearest, 可选值与 block 的可选值一致。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <tags>
@@ -251,82 +293,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Work</title>
-    <url>/2018/10/16/work/</url>
-    <content><![CDATA[<h2 id="关于工作的一些记录"><a href="#关于工作的一些记录" class="headerlink" title="关于工作的一些记录"></a>关于工作的一些记录</h2><h3 id="2018-10-16"><a href="#2018-10-16" class="headerlink" title="2018.10.16"></a>2018.10.16</h3><ol>
-<li><p>react v16.5.2 生命周期<br>  关于 <code>static getDerivedStateFromProps()</code></p>
- <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="title function_">getDerivedStateFromProps</span>(nextProps, prevState)</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. 调用：组件实例化后和接收新属性时将会调用；</span></span><br><span class="line"><span class="comment">* 2. 返回一个对象来更新状态，返回 null 表明新属性不需要更新状态；</span></span><br><span class="line"><span class="comment">* 3. 调用 this.setState() 通常不会调用该方法。</span></span><br><span class="line"><span class="comment">* 注意：父组件导致组件的渲染，即使属性没有更新，该方法也会被调用。</span></span><br><span class="line"><span class="comment">* 该方法替换了以往使用的 componentWillReceiveProps(nextProps) 方法。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<span id="more"></span>
-
-<ol start="2">
-<li><p>antd v3.8.4<br>  Modal 对话框</p>
-  <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Modal</span> <span class="attr">destroyOnClose</span>=<span class="string">&#123;true&#125;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Modal</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- destroyOnClose 参数，关闭时销毁 Modal 里的子元素，默认值为 false  --&gt;</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>echarts<br>  线形图的 <code>tooltip</code> 中 <code>formatter</code> 属性自定义</p>
-  <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> tooltip1 = &#123;</span><br><span class="line">  <span class="attr">trigger</span>: <span class="string">&#x27;axis&#x27;</span>,</span><br><span class="line">  <span class="attr">formatter</span>: <span class="string">&#x27;&#123;a&#125;&lt;br&gt;&#123;b&#125;&lt;br&gt;&#123;c&#125;&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> tooltip2 = &#123;</span><br><span class="line">  <span class="attr">trigger</span>: <span class="string">&#x27;axis&#x27;</span>,</span><br><span class="line">  <span class="attr">formatter</span>: <span class="keyword">function</span>(<span class="params">params</span>)&#123;</span><br><span class="line">      <span class="keyword">var</span> str = params[<span class="number">0</span>].<span class="property">axisValueLabel</span> + <span class="string">&#x27;&lt;br&gt;&#x27;</span>;</span><br><span class="line">      <span class="keyword">for</span>(<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;params.<span class="property">length</span>; i++)&#123;</span><br><span class="line">          str+=params[i].<span class="property">marker</span> + params[i].<span class="property">value</span> + <span class="string">&#x27; 自定义文字&#x27;</span></span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> str;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 1. trigger: axis（坐标轴触发），item（数据项图形）；</span></span><br><span class="line"><span class="comment">* 2. formatter 自定义：</span></span><br><span class="line"><span class="comment">*  (1) 字符串，缺点是没有了原有的对应的标识（marker）；</span></span><br><span class="line"><span class="comment">*  (2) 回调函数：有效解决了字符串存在的问题。  </span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="2018-10-17"><a href="#2018-10-17" class="headerlink" title="2018.10.17"></a>2018.10.17</h3><p>socket.io-client</p>
-<ol>
-<li>问题：在某个组件内的 <code>componentDidMount()</code> 方法中使用，卸载时没有进行监听事件的移除，导致一直在监听事件。</li>
-<li>解决方式：期望只在该组件中监听事件，当组件移除时取消通讯。<br><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> <span class="keyword">class</span> <span class="title class_">Demo</span> <span class="keyword">extends</span> <span class="title class_ inherited__">React.Component</span> &#123;</span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span> = <span class="title function_">io</span>(<span class="string">&#x27;http://www.xxx.com/socket&#x27;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  componentDidMount = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">emit</span>(<span class="string">&#x27;getData&#x27;</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">on</span>(<span class="string">&#x27;getData&#x27;</span>, <span class="function">(<span class="params">e</span>)=&gt;</span>&#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;getData&#x27;</span>, e);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br><span class="line">  componentWillUnmount = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 移除监听事件</span></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">socketObj</span>.<span class="title function_">removeListener</span>(<span class="string">&#x27;getData&#x27;</span>);</span><br><span class="line">    <span class="comment">// this.socketObj.close()，关闭连接。</span></span><br><span class="line">    <span class="comment">// 但之后再次进入该组件时，每一次挂载操作会增加新的监听事件，导致事件数量一直增加。所以选择移除事件。</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="2018-10-18"><a href="#2018-10-18" class="headerlink" title="2018.10.18"></a>2018.10.18</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> json1 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json2 = &#123; <span class="attr">a</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json3 = <span class="title class_">Object</span>.<span class="title function_">assign</span>(&#123;&#125;, json1, json2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(json3);  <span class="comment">// &#123; a: 2, b: 2, c: 3 &#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 等价于以下的代码</span></span><br><span class="line"><span class="keyword">let</span> json4 = &#123; <span class="attr">a</span>: <span class="number">1</span>, <span class="attr">b</span>: <span class="number">2</span>, <span class="attr">c</span>: <span class="number">3</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json5 = &#123; <span class="attr">a</span>: <span class="number">2</span> &#125;;</span><br><span class="line"><span class="keyword">let</span> json6 = &#123;...json4, ...json5&#125;;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(json6);  <span class="comment">// &#123; a: 2, b: 2, c: 3 &#125;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2018-12-28"><a href="#2018-12-28" class="headerlink" title="2018.12.28"></a>2018.12.28</h3><p><code>input</code> 缓存问题（自动填充）</p>
-<ul>
-<li>问题：<code>input</code> 输入框会自动填充已存入浏览器的表单数据，主要表现在密码输入框。</li>
-<li>解决方式：<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 1. type = &#x27;text&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">autocomplete</span>=<span class="string">&#x27;off&#x27;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;text&#x27;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 2. type = &#x27;password&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> <span class="attr">style</span>=<span class="string">&#x27;display: none;&#x27;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 或者 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&#x27;password&#x27;</span> <span class="attr">aotocomplete</span>=<span class="string">&#x27;new-password&#x27;</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 附注：autocomplete=&#x27;off&#x27; 和 autocomplete=&#x27;new-password&#x27; 的 input 属性设置在 firefox 下可能无效。 --&gt;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<h3 id="2019-02-01"><a href="#2019-02-01" class="headerlink" title="2019.02.01"></a>2019.02.01</h3><p><code>Element.scrollIntoView()</code> 方法<br>官方解释：让当前的元素滚动到浏览器窗口的可视范围内。<br>支持两种参数传入方式：</p>
-<ol>
-<li><code>element.scrollIntoView(alignToTop:Boolean)</code>;<br>当传入 <code>true</code>，等价于 <code>element.scrollIntoView()</code>;<ul>
-<li><code>true</code>: 元素顶端与所在滚动区的可视区域的顶端对齐；</li>
-<li><code>false</code>: 元素顶端与所在滚动区的可视区域的底端对齐。</li>
-</ul>
-</li>
-<li><code>element.scrollIntoView(scrollIntoViewOptions: Object)</code>;<br>IE 不支持。<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> element = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&#x27;box&#x27;</span>);</span><br><span class="line"></span><br><span class="line">element.<span class="title function_">scrollIntoView</span>();</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(<span class="literal">false</span>);</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(&#123;<span class="attr">block</span>: <span class="string">&#x27;end&#x27;</span>&#125;);</span><br><span class="line">element.<span class="title function_">scrollIntoView</span>(&#123;<span class="attr">behavior</span>: <span class="string">&#x27;instant&#x27;</span>, <span class="attr">block</span>: <span class="string">&#x27;end&#x27;</span>, <span class="attr">inline</span>: <span class="string">&#x27;nearest&#x27;</span>&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">   1. behavior: 动画效果，默认值 auto，可选值有 auto, instant, smooth；</span></span><br><span class="line"><span class="comment">   2. block: 默认值 center, 可选值有 start, end, center, nearest；</span></span><br><span class="line"><span class="comment">   3. inline: 默认值 nearest, 可选值与 block 的可选值一致。</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于 Git 常用命令</title>
-    <url>/2018/11/04/git/</url>
-    <content><![CDATA[<ol>
-<li><p>设置用户信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-</li>
-<li><p>查看配置信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取帮助</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新到仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分支相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tag 相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>远程仓库相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>强制 merge 分支 a 并覆盖分支 b</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于 Vue 生命周期</title>
     <url>/2019/07/26/vue001/</url>
     <content><![CDATA[<p>总共经历了8个阶段，分别为：创建前&#x2F;后、挂载前&#x2F;后、更新前&#x2F;后、销毁前&#x2F;后。</p>
@@ -364,6 +330,40 @@
       <tags>
         <tag>javascript</tag>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>关于 Git 常用命令</title>
+    <url>/2018/11/04/git/</url>
+    <content><![CDATA[<ol>
+<li><p>设置用户信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+</li>
+<li><p>查看配置信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取帮助</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新到仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分支相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tag 相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程仓库相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>强制 merge 分支 a 并覆盖分支 b</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>git</tag>
       </tags>
   </entry>
   <entry>
@@ -618,6 +618,40 @@
         <tag>react</tag>
         <tag>typescript</tag>
         <tag>webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>防抖与节流</title>
+    <url>/2022/08/03/js002/</url>
+    <content><![CDATA[<p>关于防抖与节流。</p>
+<span id="more"></span>
+
+<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p>所谓防抖，指的是在连续触发事件的情况下，只让 <strong>最后一次</strong> 触发事件执行函数。<br>即在最后一次事件触发后，n 秒后只执行一次函数。<br>如果在 n 秒内事件再次被触发，则重新计算函数执行时间。<br>每次事件触发都会生成一个新的定时器，并清除旧的定时器。</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（一）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handle</span> () =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 点击按钮，触发防抖，执行 handle</span></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="title function_">debounce</span>(handle, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（二）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce2</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">const</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ol>
+<li>关于 <code>setTimeout</code> 里面的箭头函数：<br>由于箭头函数里面的 <code>arguments</code> 就是外层函数的 <code>arguments</code>，所以无需在 <code>setTimeout</code> 之前定义 <code>const _args = arguments;</code></li>
+<li>关于获取执行函数中 <code>Event e</code>（即获取正确的 <code>arguments</code>）：<br>使用箭头函数获取（见上述代码的函数 <code>debounce</code>）；<br>提前定义 <code>arguments</code>（见上述代码的函数 <code>debounce2</code>）。</li>
+</ol>
+</blockquote>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
+<li>输入框连续输入的请求次数控制（防止表单多次提交，即表单元素的校验）；</li>
+<li>防止多次点击提交按钮（或者可以通过给按钮增加 <code>loading</code> 来防止）；</li>
+<li>搜索功能的联想词结果实现（生产环境可用 <code>lodash.debounce</code>）。</li>
+</ol>
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p>节流，指的是在连续触发事件的情况下，在指定时间内只执行一次函数。</p>
+<h3 id="节流——Date"><a href="#节流——Date" class="headerlink" title="节流——Date"></a>节流——Date</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（时间戳版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> pre = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    <span class="keyword">if</span> (now - pre &gt; delay) &#123;</span><br><span class="line">      pre = now;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="节流——setTimeout"><a href="#节流——setTimeout" class="headerlink" title="节流——setTimeout"></a>节流——setTimeout</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（定时器版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">let</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li>缩放场景：监控浏览器的 <code>resize</code>；</li>
+<li>拖拽场景：固定时间内只执行一次，防止超高频次触发的位置变动；</li>
+<li>动画场景：避免短时间内多次触发动画而引起的性能问题。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
