@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>关于 Hexo 搜索功能</title>
+    <url>/2017/06/02/hexo001/</url>
+    <content><![CDATA[<h3 id="设置步骤"><a href="#设置步骤" class="headerlink" title="设置步骤"></a>设置步骤</h3><ol>
+<li>下载 hexo-generator-searchdb 插件  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></li>
+</ol>
+<span id="more"></span>
+
+<ol start="2">
+<li><p>修改站点配置<br>  your_blog&#x2F;.config.yml</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改主题配置<br>  your_blog&#x2F;themes&#x2F;your_theme&#x2F;.config.yml</p>
+  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 找到 local_search，将 enable 的值设置为 true</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="出现的问题及解决方式"><a href="#出现的问题及解决方式" class="headerlink" title="出现的问题及解决方式"></a>出现的问题及解决方式</h3><h4 id="搜索功能无效"><a href="#搜索功能无效" class="headerlink" title="搜索功能无效"></a>搜索功能无效</h4><ul>
+<li><p>原因1: 搜索插件配置问题<br>按照以上所示设置步骤设置一下即可。</p>
+</li>
+<li><p>原因2: md 文档含有特殊字符</p>
+<ul>
+<li>界面显示：点击搜索后，只出现 loading 状态，搜索无法加载出来。</li>
+<li>调试：地址栏输入 <code>http://localhost:4000/search.xml</code><br>页面输出以下内容：<br>  <img src="/assets/img/hexo01.jpg" alt="页面显示错误信息"><br>查看 network，请求正常且返回了 200：<br>注：也有返回 304 的情况，我这边是返回了 200。<br>  <img src="/assets/img/hexo02.jpg" alt="network"></li>
+<li>解决方式：<br>全局使用正则表达式搜索 \x08 或者 \u0008，搜索到到内容替换成空格。<br>注：也可能是其他的特殊字符，搜索替换为空就行。</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>notes</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>关于 Javascript 的 this 和闭包</title>
     <url>/2017/05/20/js001/</url>
     <content><![CDATA[<ul>
@@ -44,37 +75,6 @@
 ]]></content>
       <tags>
         <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>关于 Hexo 搜索功能</title>
-    <url>/2017/06/02/hexo001/</url>
-    <content><![CDATA[<h3 id="设置步骤"><a href="#设置步骤" class="headerlink" title="设置步骤"></a>设置步骤</h3><ol>
-<li>下载 hexo-generator-searchdb 插件  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure></li>
-</ol>
-<span id="more"></span>
-
-<ol start="2">
-<li><p>修改站点配置<br>  your_blog&#x2F;.config.yml</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>修改主题配置<br>  your_blog&#x2F;themes&#x2F;your_theme&#x2F;.config.yml</p>
-  <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 找到 local_search，将 enable 的值设置为 true</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure></li>
-</ol>
-<h3 id="出现的问题及解决方式"><a href="#出现的问题及解决方式" class="headerlink" title="出现的问题及解决方式"></a>出现的问题及解决方式</h3><h4 id="搜索功能无效"><a href="#搜索功能无效" class="headerlink" title="搜索功能无效"></a>搜索功能无效</h4><ul>
-<li><p>原因1: 搜索插件配置问题<br>按照以上所示设置步骤设置一下即可。</p>
-</li>
-<li><p>原因2: md 文档含有特殊字符</p>
-<ul>
-<li>界面显示：点击搜索后，只出现 loading 状态，搜索无法加载出来。</li>
-<li>调试：地址栏输入 <code>http://localhost:4000/search.xml</code><br>页面输出以下内容：<br>  <img src="/assets/img/hexo01.jpg" alt="页面显示错误信息"><br>查看 network，请求正常且返回了 200：<br>注：也有返回 304 的情况，我这边是返回了 200。<br>  <img src="/assets/img/hexo02.jpg" alt="network"></li>
-<li>解决方式：<br>全局使用正则表达式搜索 \x08 或者 \u0008，搜索到到内容替换成空格。<br>注：也可能是其他的特殊字符，搜索替换为空就行。</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>notes</tag>
       </tags>
   </entry>
   <entry>
@@ -251,6 +251,40 @@
       </tags>
   </entry>
   <entry>
+    <title>关于 Git 常用命令</title>
+    <url>/2018/11/04/git/</url>
+    <content><![CDATA[<ol>
+<li><p>设置用户信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+</li>
+<li><p>查看配置信息</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>获取帮助</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>更新到仓库</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>分支相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tag 相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>远程仓库相关</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>强制 merge 分支 a 并覆盖分支 b</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Work</title>
     <url>/2018/10/16/work/</url>
     <content><![CDATA[<h2 id="关于工作的一些记录"><a href="#关于工作的一些记录" class="headerlink" title="关于工作的一些记录"></a>关于工作的一些记录</h2><h3 id="2018-10-16"><a href="#2018-10-16" class="headerlink" title="2018.10.16"></a>2018.10.16</h3><ol>
@@ -293,40 +327,6 @@
       </tags>
   </entry>
   <entry>
-    <title>关于 Git 常用命令</title>
-    <url>/2018/11/04/git/</url>
-    <content><![CDATA[<ol>
-<li><p>设置用户信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;xxx&quot;</span><br><span class="line">git config --global user.email &quot;xxx@xxx&quot;</span><br><span class="line"></span><br><span class="line">注：有 --global，更改的配置文件位于用户目录下，反之，位于当前项目的 .git/config。</span><br></pre></td></tr></table></figure>
-<span id="more"></span>
-</li>
-<li><p>查看配置信息</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有：</span><br><span class="line">git config --list</span><br><span class="line"></span><br><span class="line">查看某一项：</span><br><span class="line">git config user.name</span><br><span class="line">git config user.email</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>获取帮助</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git help</span><br><span class="line">git help config</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>更新到仓库</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看当前文件状态：</span><br><span class="line">git status</span><br><span class="line"></span><br><span class="line">跟踪文件：</span><br><span class="line">单个文件 =&gt; git add [file-name]</span><br><span class="line">所有文件 =&gt; git add .</span><br><span class="line"></span><br><span class="line">------ 暂存状态 ------</span><br><span class="line"></span><br><span class="line">提交更新：</span><br><span class="line">git commit -m &quot;提交说明&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>分支相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看本地分支和远程分支：</span><br><span class="line">git branch </span><br><span class="line">git branch -a</span><br><span class="line"></span><br><span class="line">建立本地分支并推送到远程仓库：</span><br><span class="line">git checkout -b [branch-name]</span><br><span class="line">git push [remote-name] [branch-name]</span><br><span class="line"></span><br><span class="line">删除本地分支并推送到远程仓库：</span><br><span class="line">git branch -D [branch-name]:[branch-name]</span><br><span class="line">git push [remote-name] :[branch-name]</span><br><span class="line"></span><br><span class="line">推送本地所有分支/tag 到远程仓库：</span><br><span class="line">git push origin *:*</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>tag 相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">查看所有标签：</span><br><span class="line">git tag</span><br><span class="line">查看某个特定的标签范围(比如v1.5.5)：</span><br><span class="line">git tag -l &quot;v1.5.5*&quot;</span><br><span class="line"></span><br><span class="line">查看标签详情：</span><br><span class="line">git show [tag-name]</span><br><span class="line"></span><br><span class="line">创建标签：</span><br><span class="line">git tag -a [tag-name] -m [infomation]</span><br><span class="line"></span><br><span class="line">推送标签到远程：</span><br><span class="line">单个 =&gt; git push [remote-name] [tag-name]</span><br><span class="line">多个 =&gt; git push [remote-name] --tags</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>远程仓库相关</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">远程仓库的名字(remote-name)默认是 origin</span><br><span class="line"></span><br><span class="line">查看当前远程仓库的名字和对应的url</span><br><span class="line">git remote -v</span><br><span class="line"></span><br><span class="line">从远程仓库克隆代码到本地</span><br><span class="line">git clone [url]</span><br><span class="line"></span><br><span class="line">更换远程仓库地址</span><br><span class="line">git remote set-url [remote-name] [url]</span><br><span class="line"></span><br><span class="line">添加远程仓库</span><br><span class="line">git remote add [remote-name] [url]</span><br><span class="line"></span><br><span class="line">从远程仓库抓取数据</span><br><span class="line">git fetch [remote-name]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>强制 merge 分支 a 并覆盖分支 b</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git fetch --all</span><br><span class="line">git reset --hard [remote-name]/a</span><br><span class="line">git push [remote-name] b -f</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <tags>
-        <tag>git</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>关于 Vue 生命周期</title>
     <url>/2019/07/26/vue001/</url>
     <content><![CDATA[<p>总共经历了8个阶段，分别为：创建前&#x2F;后、挂载前&#x2F;后、更新前&#x2F;后、销毁前&#x2F;后。</p>
@@ -364,6 +364,40 @@
       <tags>
         <tag>javascript</tag>
         <tag>vue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>防抖与节流</title>
+    <url>/2019/04/11/js002/</url>
+    <content><![CDATA[<p>关于防抖与节流。</p>
+<span id="more"></span>
+
+<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p>所谓防抖，指的是在连续触发事件的情况下，只让 <strong>最后一次</strong> 触发事件执行函数。<br>即在最后一次事件触发后，n 秒后只执行一次函数。<br>如果在 n 秒内事件再次被触发，则重新计算函数执行时间。<br>每次事件触发都会生成一个新的定时器，并清除旧的定时器。</p>
+<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（一）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handle</span> () &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 点击按钮，触发防抖，执行 handle</span></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="title function_">debounce</span>(handle, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（二）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce2</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">const</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<ol>
+<li>关于 <code>setTimeout</code> 里面的箭头函数：<br>由于箭头函数里面的 <code>arguments</code> 就是外层函数的 <code>arguments</code>，所以无需在 <code>setTimeout</code> 之前定义 <code>const _args = arguments;</code></li>
+<li>关于获取执行函数中 <code>Event e</code>（即获取正确的 <code>arguments</code>）：<br>使用箭头函数获取（见上述代码的函数 <code>debounce</code>）；<br>提前定义 <code>arguments</code>（见上述代码的函数 <code>debounce2</code>）。</li>
+</ol>
+</blockquote>
+<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
+<li>输入框连续输入的请求次数控制（防止表单多次提交，即表单元素的校验）；</li>
+<li>防止多次点击提交按钮（或者可以通过给按钮增加 <code>loading</code> 来防止）；</li>
+<li>搜索功能的联想词结果实现（生产环境可用 <code>lodash.debounce</code>）。</li>
+</ol>
+<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p>节流，指的是在连续触发事件的情况下，在指定时间内只执行一次函数。</p>
+<h3 id="节流——Date"><a href="#节流——Date" class="headerlink" title="节流——Date"></a>节流——Date</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（时间戳版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> pre = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    <span class="keyword">if</span> (now - pre &gt; delay) &#123;</span><br><span class="line">      pre = now;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
+<h3 id="节流——setTimeout"><a href="#节流——setTimeout" class="headerlink" title="节流——setTimeout"></a>节流——setTimeout</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（定时器版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">let</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
+<li>缩放场景：监控浏览器的 <code>resize</code>；</li>
+<li>拖拽场景：固定时间内只执行一次，防止超高频次触发的位置变动；</li>
+<li>动画场景：避免短时间内多次触发动画而引起的性能问题。</li>
+</ol>
+]]></content>
+      <tags>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -456,6 +490,50 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo 更新的相关记录</title>
+    <url>/2023/03/23/hexo003/</url>
+    <content><![CDATA[<h2 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h2><p>在<a href="https://chendadou.github.io/2023/03/22/hexo002">《Hexo 更新依赖过程中出现的问题》</a>这篇文章中，对于 NexT 主题部分出现的问题：</p>
+<ol>
+<li>修复过程繁琐且问题接二连三地出现；</li>
+<li>有些修复甚至要涉及到修改 NexT 主题的源码；</li>
+</ol>
+<p>综上，直接进行 NexT 主题版本的更新操作会比在旧版本基础之上进行多次修改的效果要好一点。</p>
+<span id="more"></span>
+
+<h2 id="关于版本"><a href="#关于版本" class="headerlink" title="关于版本"></a>关于版本</h2><h3 id="Hexo-相关"><a href="#Hexo-相关" class="headerlink" title="Hexo 相关"></a>Hexo 相关</h3><blockquote>
+<p>由 v3.9.0 更新到 v6.3.0</p>
+</blockquote>
+<p>更新依赖前：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo-site&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.9.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.9.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.1.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-json-content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>更新依赖后：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo-site&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;6.3.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-searchdb&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.4.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-swig&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-theme-landscape&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.3&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<h3 id="NexT-主题相关"><a href="#NexT-主题相关" class="headerlink" title="NexT 主题相关"></a>NexT 主题相关</h3><p>  更新前：</p>
+<blockquote>
+<ol>
+<li>版本号：v5.1.4</li>
+<li>github：<a href="https://github.com/iissnan/hexo-theme-next">iissnan&#x2F;hexo-theme-next</a></li>
+</ol>
+</blockquote>
+<p>  更新后：</p>
+<blockquote>
+<ol>
+<li>版本号：v7.8.0</li>
+<li>github：<a href="https://github.com/theme-next/hexo-theme-next">theme-next&#x2F;hexo-theme-next</a></li>
+</ol>
+</blockquote>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># node 版本</span></span><br><span class="line">node@18.14.2</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm 版本</span></span><br><span class="line">npm@9.5.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># hexo-cli 版本</span></span><br><span class="line">hexo-cli@4.3.0</span><br></pre></td></tr></table></figure>
+
+<h2 id="关于更新过程"><a href="#关于更新过程" class="headerlink" title="关于更新过程"></a>关于更新过程</h2><h3 id="Hexo-相关-1"><a href="#Hexo-相关-1" class="headerlink" title="Hexo 相关"></a>Hexo 相关</h3><p>参考 <a href="https://chendadou.github.io/2023/03/22/hexo002">《Hexo 更新依赖过程中出现的问题》</a></p>
+<h3 id="NexT-主题相关-1"><a href="#NexT-主题相关-1" class="headerlink" title="NexT 主题相关"></a>NexT 主题相关</h3><p>参考下文提及的<strong>【NexT 主题】更新说明及常见问题</strong>。</p>
+<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><blockquote>
+<ol>
+<li><a href="https://github.com/iissnan/hexo-theme-next/issues/2252">【NexT 主题】仓库变动的说明</a>（<strong>看评论</strong>）</li>
+<li><a href="https://github.com/next-theme/hexo-theme-next/issues/4">【NexT 主题】更新说明及常见问题</a>（<strong>必读</strong>）</li>
+</ol>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo 更新依赖过程中出现的问题</title>
     <url>/2023/03/22/hexo002/</url>
     <content><![CDATA[<h2 id="问题概述"><a href="#问题概述" class="headerlink" title="问题概述"></a>问题概述</h2><ol>
@@ -538,84 +616,6 @@
       <tags>
         <tag>notes</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>防抖与节流</title>
-    <url>/2022/08/03/js002/</url>
-    <content><![CDATA[<p>关于防抖与节流。</p>
-<span id="more"></span>
-
-<h2 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h2><p>所谓防抖，指的是在连续触发事件的情况下，只让 <strong>最后一次</strong> 触发事件执行函数。<br>即在最后一次事件触发后，n 秒后只执行一次函数。<br>如果在 n 秒内事件再次被触发，则重新计算函数执行时间。<br>每次事件触发都会生成一个新的定时器，并清除旧的定时器。</p>
-<h3 id="代码示例"><a href="#代码示例" class="headerlink" title="代码示例"></a>代码示例</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> button = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;input&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（一）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 测试</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">handle</span> () &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;hello world&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 点击按钮，触发防抖，执行 handle</span></span><br><span class="line">button.<span class="title function_">addEventListener</span>(<span class="string">&#x27;click&#x27;</span>, <span class="title function_">debounce</span>(handle, <span class="number">1000</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 函数防抖（二）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">debounce2</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">const</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 每次执行的时候，把前一个 timer 清除掉</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<ol>
-<li>关于 <code>setTimeout</code> 里面的箭头函数：<br>由于箭头函数里面的 <code>arguments</code> 就是外层函数的 <code>arguments</code>，所以无需在 <code>setTimeout</code> 之前定义 <code>const _args = arguments;</code></li>
-<li>关于获取执行函数中 <code>Event e</code>（即获取正确的 <code>arguments</code>）：<br>使用箭头函数获取（见上述代码的函数 <code>debounce</code>）；<br>提前定义 <code>arguments</code>（见上述代码的函数 <code>debounce2</code>）。</li>
-</ol>
-</blockquote>
-<h3 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h3><ol>
-<li>输入框连续输入的请求次数控制（防止表单多次提交，即表单元素的校验）；</li>
-<li>防止多次点击提交按钮（或者可以通过给按钮增加 <code>loading</code> 来防止）；</li>
-<li>搜索功能的联想词结果实现（生产环境可用 <code>lodash.debounce</code>）。</li>
-</ol>
-<h2 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h2><p>节流，指的是在连续触发事件的情况下，在指定时间内只执行一次函数。</p>
-<h3 id="节流——Date"><a href="#节流——Date" class="headerlink" title="节流——Date"></a>节流——Date</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（时间戳版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> pre = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> now = <span class="keyword">new</span> <span class="title class_">Date</span>();</span><br><span class="line">    <span class="keyword">if</span> (now - pre &gt; delay) &#123;</span><br><span class="line">      pre = now;</span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
-<h3 id="节流——setTimeout"><a href="#节流——setTimeout" class="headerlink" title="节流——setTimeout"></a>节流——setTimeout</h3><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 函数节流（定时器版）</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">throttle</span> (fn, delay) &#123;</span><br><span class="line">  <span class="keyword">let</span> timer;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">let</span> _this = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="keyword">let</span> _args = <span class="variable language_">arguments</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(_this, _args);</span><br><span class="line">      timer = <span class="literal">null</span>;</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">changeColor</span> () &#123;</span><br><span class="line">  <span class="keyword">let</span> r = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> g = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="keyword">let</span> b = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>() * <span class="number">255</span>);</span><br><span class="line">  <span class="variable language_">document</span>.<span class="property">body</span>.<span class="property">style</span>.<span class="property">background</span> = <span class="string">`rgb(<span class="subst">$&#123;r&#125;</span>, <span class="subst">$&#123;g&#125;</span>, <span class="subst">$&#123;b&#125;</span>)`</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">window</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;resize&#x27;</span>, <span class="title function_">throttle</span>(changeColor, <span class="number">2000</span>));</span><br></pre></td></tr></table></figure>
-
-<h3 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h3><ol>
-<li>缩放场景：监控浏览器的 <code>resize</code>；</li>
-<li>拖拽场景：固定时间内只执行一次，防止超高频次触发的位置变动；</li>
-<li>动画场景：避免短时间内多次触发动画而引起的性能问题。</li>
-</ol>
-]]></content>
-      <tags>
-        <tag>javascript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo 更新的相关记录</title>
-    <url>/2023/03/23/hexo003/</url>
-    <content><![CDATA[<h2 id="写在前面的话"><a href="#写在前面的话" class="headerlink" title="写在前面的话"></a>写在前面的话</h2><p>在<a href="https://chendadou.github.io/2023/03/22/hexo002">《Hexo 更新依赖过程中出现的问题》</a>这篇文章中，对于 NexT 主题部分出现的问题：</p>
-<ol>
-<li>修复过程繁琐且问题接二连三地出现；</li>
-<li>有些修复甚至要涉及到修改 NexT 主题的源码；</li>
-</ol>
-<p>综上，直接进行 NexT 主题版本的更新操作会比在旧版本基础之上进行多次修改的效果要好一点。</p>
-<span id="more"></span>
-
-<h2 id="关于版本"><a href="#关于版本" class="headerlink" title="关于版本"></a>关于版本</h2><h3 id="Hexo-相关"><a href="#Hexo-相关" class="headerlink" title="Hexo 相关"></a>Hexo 相关</h3><blockquote>
-<p>由 v3.9.0 更新到 v6.3.0</p>
-</blockquote>
-<p>更新依赖前：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo-site&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3.9.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.9.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-cli&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.1.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-json-content&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.3.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.2.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>更新依赖后：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="comment">// package.json</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;hexo-site&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;private&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;6.3.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-searchdb&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.4.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-marked&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-swig&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-theme-landscape&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.0.3&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<h3 id="NexT-主题相关"><a href="#NexT-主题相关" class="headerlink" title="NexT 主题相关"></a>NexT 主题相关</h3><p>  更新前：</p>
-<blockquote>
-<ol>
-<li>版本号：v5.1.4</li>
-<li>github：<a href="https://github.com/iissnan/hexo-theme-next">iissnan&#x2F;hexo-theme-next</a></li>
-</ol>
-</blockquote>
-<p>  更新后：</p>
-<blockquote>
-<ol>
-<li>版本号：v7.8.0</li>
-<li>github：<a href="https://github.com/theme-next/hexo-theme-next">theme-next&#x2F;hexo-theme-next</a></li>
-</ol>
-</blockquote>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># node 版本</span></span><br><span class="line">node@18.14.2</span><br><span class="line"></span><br><span class="line"><span class="comment"># npm 版本</span></span><br><span class="line">npm@9.5.0</span><br><span class="line"></span><br><span class="line"><span class="comment"># hexo-cli 版本</span></span><br><span class="line">hexo-cli@4.3.0</span><br></pre></td></tr></table></figure>
-
-<h2 id="关于更新过程"><a href="#关于更新过程" class="headerlink" title="关于更新过程"></a>关于更新过程</h2><h3 id="Hexo-相关-1"><a href="#Hexo-相关-1" class="headerlink" title="Hexo 相关"></a>Hexo 相关</h3><p>参考 <a href="https://chendadou.github.io/2023/03/22/hexo002">《Hexo 更新依赖过程中出现的问题》</a></p>
-<h3 id="NexT-主题相关-1"><a href="#NexT-主题相关-1" class="headerlink" title="NexT 主题相关"></a>NexT 主题相关</h3><p>参考下文提及的<strong>【NexT 主题】更新说明及常见问题</strong>。</p>
-<h2 id="其他说明"><a href="#其他说明" class="headerlink" title="其他说明"></a>其他说明</h2><blockquote>
-<ol>
-<li><a href="https://github.com/iissnan/hexo-theme-next/issues/2252">【NexT 主题】仓库变动的说明</a>（<strong>看评论</strong>）</li>
-<li><a href="https://github.com/next-theme/hexo-theme-next/issues/4">【NexT 主题】更新说明及常见问题</a>（<strong>必读</strong>）</li>
-</ol>
-</blockquote>
-]]></content>
   </entry>
   <entry>
     <title>从零搭建 React + TS 项目（一）</title>
